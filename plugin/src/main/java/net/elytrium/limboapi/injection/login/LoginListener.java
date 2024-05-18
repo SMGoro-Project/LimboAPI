@@ -164,7 +164,7 @@ public class LoginListener {
                 event.getGameProfile(),
                 connection,
                 inboundConnection.getVirtualHost().orElse(null),
-                this.onlineMode.contains(event.getUsername()),
+                event.isOnlineMode(),
                 playerKey
             );
             if (connection.getProtocolVersion().compareTo(ProtocolVersion.MINECRAFT_1_20_2) >= 0) {
